@@ -1,8 +1,10 @@
+
 //basic server configuration hai
 const express= require('express')
 const mongoose=require('mongoose')
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
+
 //create a data base connection
 //ham ek seperate file banake uze imort/use kar skte h idr
 mongoose.connect(
