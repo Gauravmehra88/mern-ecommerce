@@ -1,5 +1,8 @@
-import { Routes } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import AuthLayout from "./components/auth/layout"
+import AuthLogin from "./pages/auth/login"
+import AuthRegister from "./pages/auth/register"
+
 
 
 function App(){
@@ -11,9 +14,11 @@ function App(){
           <h1>Header component</h1>
 
           <Routes>
+            
             <Route path="/auth" element={<AuthLayout/>}>
-
-            </Route>
+             <Route path="login" element={<AuthLogin/>}/> 
+             <Route path="register" element={<AuthRegister/>}/>
+           </Route>
           </Routes>
 
 

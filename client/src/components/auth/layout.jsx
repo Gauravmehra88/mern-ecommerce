@@ -1,4 +1,4 @@
-const { Outlet } = require("react-router-dom");
+import { Outlet } from "react-router-dom";
 
 
 
@@ -14,10 +14,10 @@ function AuthLayout(){
             </div>
             </div>
            <div className="flex flex-1 justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
-            <Outlet></Outlet>
+            <Outlet/>
            </div>
         </div>
-    )
+    );
 }
 
 export default AuthLayout;
