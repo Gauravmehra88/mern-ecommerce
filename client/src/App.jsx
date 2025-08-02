@@ -7,6 +7,8 @@ import AdminProducts from "./pages/admin-view/products"
 import AdminOrders from "./pages/admin-view/orders"
 import AdminFeatures from "./pages/admin-view/feature"
 import AdminLayout from "./components/admin-view/layout"
+import ShoppingLayout from "./pages/shopping-view/layout"
+import NotFound from "./pages/shopping-view/not-found"
 
 
 
@@ -16,7 +18,7 @@ function App(){
     return(
         <div className="flex flex-col overflow-hidden bg-white">
             {/*you can render all the common components that will be rendering in all the pages*/}
-          <h1>Header component</h1>
+        
 
           <Routes>
             
@@ -25,10 +27,16 @@ function App(){
              <Route path="register" element={<AuthRegister/>}/>
            </Route>
            <Route path="/admin" element={<AdminLayout/>}>
-             <Route path="dashboard" element={<AdminDashboard/>}/>
-             <Route path="products" element={<AdminProducts/>}/>
-             <Route path="orders" element={<AdminOrders/>}/>
-             <Route path="features" element={<AdminFeatures/>}/>
+               <Route path="dashboard" element={<AdminDashboard/>}/>
+               <Route path="products" element={<AdminProducts/>}/>
+               <Route path="orders" element={<AdminOrders/>}/>
+               <Route path="features" element={<AdminFeatures/>}/>
+           </Route>
+           <Route>
+              <Route path="/shop" element={<ShoppingLayout/>}/>
+              <Route path="*" element={<NotFound/>}/>
+              <Route/>
+              <Route/>
            </Route>
           </Routes>
         </div>
