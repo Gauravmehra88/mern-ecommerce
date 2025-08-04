@@ -9,7 +9,7 @@ function ShoppingLayout() {
             <ShoppingHeader/>
 
             <main className="flex flex-col w-full">
-                <Outlet/> {/*we will be rendering the child*/}
+                < Outlet /> {/*we will be rendering the child*/}
             </main>
         </div>
     );
