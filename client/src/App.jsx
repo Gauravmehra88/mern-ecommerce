@@ -26,28 +26,25 @@ function App(){
 
           <Routes>
             
-            <Route path="/auth" element={<AuthLayout/>}>
+            <Route path="/auth" element={<AuthLayout/>}>            {/*-----AUTH LAYOUT-----*/}
              <Route path="login" element={<AuthLogin/>}/> 
              <Route path="register" element={<AuthRegister/>}/>
            </Route>
-           <Route path="/admin" element={<AdminLayout/>}>
+
+           <Route path="/admin" element={<AdminLayout/>}>            {/*-----ADMIN LAYOUT-----*/}
                <Route path="dashboard" element={<AdminDashboard/>}/>
                <Route path="products" element={<AdminProducts/>}/>
                <Route path="orders" element={<AdminOrders/>}/>
                <Route path="features" element={<AdminFeatures/>}/>
            </Route>
-           <Route>
-              <Route path="/shop" element={<ShoppingLayout/>}/>
-
+           
+           <Route path="/shop" element={<ShoppingLayout/>}>       {/*----SHOPPING LAYOUT-----*/}
               <Route path="home" element={<ShoppingHome/>}/>
               <Route path="listing" element={<ShoppingListing/>}/>
               <Route path="checkout" element={<ShoppingCheckout/>}/>
               <Route path="account" element={<ShoppingAccount/>}/>
-
-              <Route path="*" element={<NotFound/>}/>
-              <Route/>
-              <Route/>
            </Route>
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
         </div>
 
