@@ -14,12 +14,14 @@ import ShoppingHome from "./pages/shopping-view/home"
 import ShoppingCheckout from "./pages/shopping-view/checkout"
 import ShoppingAccount from "./pages/shopping-view/account"
 import CheckAuth from "./components/common/check-auth"
+import UnauthPage from "./pages/unauth-page"
 
 
 
 function App(){
   const isAuthenticated=false;
   const user=null;
+
     return(
         <div className="flex flex-col overflow-hidden bg-white">
             {/*you can render all the common components that will be rendering in all the pages*/}
@@ -58,6 +60,7 @@ function App(){
               <Route path="account" element={<ShoppingAccount/>}/>
            </Route>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="unauth-page" element={<UnauthPage/>}/>
           </Routes>
         </div>
 
